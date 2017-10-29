@@ -1,0 +1,21 @@
+/data/php-ext/utils/ext/kernel/fcall.c:57:9: warning: nonnull parameter 'ce' will evaluate to 'true' on first encounter [-Wpointer-bool-conversion]
+        while (ce) {
+        ~~~~~  ^~
+./kernel/fcall.h:634:76: note: declared 'nonnull' here
+int zephir_has_constructor_ce(const zend_class_entry *ce) ZEPHIR_ATTR_PURE ZEPHIR_ATTR_NONNULL;
+                                                                           ^
+./kernel/globals.h:105:45: note: expanded from macro 'ZEPHIR_ATTR_NONNULL'
+# define ZEPHIR_ATTR_NONNULL __attribute__((nonnull))
+                                            ^
+1 warning generated.
+/data/php-ext/utils/ext/kernel/require.c:54:7: warning: nonnull parameter 'require_path' will evaluate to 'true' on first encounter [-Wpointer-bool-conversion]
+        if (!require_path) {
+            ~^~~~~~~~~~~~
+./kernel/require.h:26:85: note: declared 'nonnull' here
+int zephir_require_ret(zval **return_value_ptr, const char *require_path TSRMLS_DC) ZEPHIR_ATTR_NONNULL1(2);
+                                                                                    ^
+./kernel/globals.h:106:49: note: expanded from macro 'ZEPHIR_ATTR_NONNULL1'
+# define ZEPHIR_ATTR_NONNULL1(x) __attribute__((nonnull (x)))
+                                                ^
+1 warning generated.
+warning: no debug symbols in executable (-arch x86_64)
